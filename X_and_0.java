@@ -105,7 +105,7 @@ public class X_and_0{
 	   System.out.println("Alege un numar intre 1 si 9 :");
 	   int playerPos = scan.nextInt();
 	   while(playerPositions.contains(playerPos)||cpuPositions.contains(playerPos)){
-	       System.out.println("Pozitia e luata.Alege alta pozitie:");
+	       System.out.println("Pozitia e luata. Alege alta pozitie:");
 	       playerPos = scan.nextInt();
 	   }
 	   placePiece(boardGame,playerPos,"player");
