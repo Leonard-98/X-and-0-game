@@ -81,13 +81,13 @@ public class X_and_0{
         
         for(List l:winning){
             if(playerPositions.containsAll(l)){
-                System.out.println("Bine ba, ai castigat!");
+                System.out.println("Felicitari, ai castigat!");
                 System.exit(0);
             }else if(cpuPositions.containsAll(l)){
-                System.out.println("Esti lemn ba, lasa-te!");
+                System.out.println("Ai pierdut!");
                 System.exit(0);
             }else if(playerPositions.size() + cpuPositions.size()==9){
-                System.out.println("Nu e in fiecare zi duminica :))");
+                System.out.println("Este egalitate!");
                 System.exit(0);
             }
         }
@@ -102,10 +102,10 @@ public class X_and_0{
 	  
 	  while(true){
 	   Scanner scan= new Scanner (System.in); 
-	   System.out.println("Baga un numar intre 1 si 9 :");
+	   System.out.println("Alege un numar intre 1 si 9 :");
 	   int playerPos = scan.nextInt();
 	   while(playerPositions.contains(playerPos)||cpuPositions.contains(playerPos)){
-	       System.out.println("Pozitia e luata.Esti chior? :)) ");
+	       System.out.println("Pozitia e luata.Alege alta pozitie:");
 	       playerPos = scan.nextInt();
 	   }
 	   placePiece(boardGame,playerPos,"player");
@@ -113,7 +113,6 @@ public class X_and_0{
 	   Random rand = new Random();
 	   int cpuPos = rand.nextInt(9)+1;
 	   while(playerPositions.contains(cpuPos)||cpuPositions.contains(cpuPos)){
-	      // System.out.println("Pozitia e luata.Esti chior? :)) ");
 	       cpuPos = rand.nextInt(9)+1;
 	   }
 	   
